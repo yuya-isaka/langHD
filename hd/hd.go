@@ -221,7 +221,6 @@ func (h *langHD) Testing() {
 		var maxCosine float32 = -2
 		for trainName, trainVec := range h.langs {
 			cosine := testVec.Cosine(trainVec)
-			fmt.Println(cosine)
 			if cosine > maxCosine {
 				maxCosine = cosine
 				match = trainName
